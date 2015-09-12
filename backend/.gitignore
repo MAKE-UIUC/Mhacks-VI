@@ -2,4 +2,5 @@ venv
 *.pyc
 .DS_Store
 api_key.txt
-
+*.swp
+bing_api_key.txt
