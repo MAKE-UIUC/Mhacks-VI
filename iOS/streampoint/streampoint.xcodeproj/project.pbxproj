@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		562CBAB11BA3DD3C006A3F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CBAB01BA3DD3C006A3F73 /* AppDelegate.swift */; };
+		562CBAB41BA3DD3C006A3F73 /* streampoint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 562CBAB21BA3DD3C006A3F73 /* streampoint.xcdatamodeld */; };
+		562CBAB61BA3DD3C006A3F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CBAB51BA3DD3C006A3F73 /* ViewController.swift */; };
+		562CBAB91BA3DD3C006A3F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562CBAB71BA3DD3C006A3F73 /* Main.storyboard */; };
+		562CBABB1BA3DD3C006A3F73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562CBABA1BA3DD3C006A3F73 /* Images.xcassets */; };
+		562CBABE1BA3DD3C006A3F73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562CBABC1BA3DD3C006A3F73 /* LaunchScreen.xib */; };
+		562CBACA1BA3DD3C006A3F73 /* streampointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CBAC91BA3DD3C006A3F73 /* streampointTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		562CBAC41BA3DD3C006A3F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 562CBAA31BA3DD3C006A3F73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 562CBAAA1BA3DD3C006A3F73;
+			remoteInfo = streampoint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		562CBAAB1BA3DD3C006A3F73 /* streampoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streampoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		562CBAAF1BA3DD3C006A3F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		562CBAB01BA3DD3C006A3F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		562CBAB31BA3DD3C006A3F73 /* streampoint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = streampoint.xcdatamodel; sourceTree = "<group>"; };
+		562CBAB51BA3DD3C006A3F73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		562CBAB81BA3DD3C006A3F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		562CBABA1BA3DD3C006A3F73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		562CBABD1BA3DD3C006A3F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		562CBAC31BA3DD3C006A3F73 /* streampointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = streampointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		562CBAC81BA3DD3C006A3F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		562CBAC91BA3DD3C006A3F73 /* streampointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = streampointTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		562CBAA81BA3DD3C006A3F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562CBAC01BA3DD3C006A3F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		562CBAA21BA3DD3C006A3F73 = {
+			isa = PBXGroup;
+			children = (
+				562CBAAD1BA3DD3C006A3F73 /* streampoint */,
+				562CBAC61BA3DD3C006A3F73 /* streampointTests */,
+				562CBAAC1BA3DD3C006A3F73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		562CBAAC1BA3DD3C006A3F73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				562CBAAB1BA3DD3C006A3F73 /* streampoint.app */,
+				562CBAC31BA3DD3C006A3F73 /* streampointTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		562CBAAD1BA3DD3C006A3F73 /* streampoint */ = {
+			isa = PBXGroup;
+			children = (
+				562CBAB01BA3DD3C006A3F73 /* AppDelegate.swift */,
+				562CBAB51BA3DD3C006A3F73 /* ViewController.swift */,
+				562CBAB71BA3DD3C006A3F73 /* Main.storyboard */,
+				562CBABA1BA3DD3C006A3F73 /* Images.xcassets */,
+				562CBABC1BA3DD3C006A3F73 /* LaunchScreen.xib */,
+				562CBAB21BA3DD3C006A3F73 /* streampoint.xcdatamodeld */,
+				562CBAAE1BA3DD3C006A3F73 /* Supporting Files */,
+			);
+			path = streampoint;
+			sourceTree = "<group>";
+		};
+		562CBAAE1BA3DD3C006A3F73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				562CBAAF1BA3DD3C006A3F73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		562CBAC61BA3DD3C006A3F73 /* streampointTests */ = {
+			isa = PBXGroup;
+			children = (
+				562CBAC91BA3DD3C006A3F73 /* streampointTests.swift */,
+				562CBAC71BA3DD3C006A3F73 /* Supporting Files */,
+			);
+			path = streampointTests;
+			sourceTree = "<group>";
+		};
+		562CBAC71BA3DD3C006A3F73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				562CBAC81BA3DD3C006A3F73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		562CBAAA1BA3DD3C006A3F73 /* streampoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 562CBACD1BA3DD3C006A3F73 /* Build configuration list for PBXNativeTarget "streampoint" */;
+			buildPhases = (
+				562CBAA71BA3DD3C006A3F73 /* Sources */,
+				562CBAA81BA3DD3C006A3F73 /* Frameworks */,
+				562CBAA91BA3DD3C006A3F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = streampoint;
+			productName = streampoint;
+			productReference = 562CBAAB1BA3DD3C006A3F73 /* streampoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		562CBAC21BA3DD3C006A3F73 /* streampointTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 562CBAD01BA3DD3C006A3F73 /* Build configuration list for PBXNativeTarget "streampointTests" */;
+			buildPhases = (
+				562CBABF1BA3DD3C006A3F73 /* Sources */,
+				562CBAC01BA3DD3C006A3F73 /* Frameworks */,
+				562CBAC11BA3DD3C006A3F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				562CBAC51BA3DD3C006A3F73 /* PBXTargetDependency */,
+			);
+			name = streampointTests;
+			productName = streampointTests;
+			productReference = 562CBAC31BA3DD3C006A3F73 /* streampointTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		562CBAA31BA3DD3C006A3F73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = MAKE;
+				TargetAttributes = {
+					562CBAAA1BA3DD3C006A3F73 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					562CBAC21BA3DD3C006A3F73 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 562CBAAA1BA3DD3C006A3F73;
+					};
+				};
+			};
+			buildConfigurationList = 562CBAA61BA3DD3C006A3F73 /* Build configuration list for PBXProject "streampoint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 562CBAA21BA3DD3C006A3F73;
+			productRefGroup = 562CBAAC1BA3DD3C006A3F73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				562CBAAA1BA3DD3C006A3F73 /* streampoint */,
+				562CBAC21BA3DD3C006A3F73 /* streampointTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		562CBAA91BA3DD3C006A3F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562CBAB91BA3DD3C006A3F73 /* Main.storyboard in Resources */,
+				562CBABE1BA3DD3C006A3F73 /* LaunchScreen.xib in Resources */,
+				562CBABB1BA3DD3C006A3F73 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562CBAC11BA3DD3C006A3F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		562CBAA71BA3DD3C006A3F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562CBAB61BA3DD3C006A3F73 /* ViewController.swift in Sources */,
+				562CBAB41BA3DD3C006A3F73 /* streampoint.xcdatamodeld in Sources */,
+				562CBAB11BA3DD3C006A3F73 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562CBABF1BA3DD3C006A3F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562CBACA1BA3DD3C006A3F73 /* streampointTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		562CBAC51BA3DD3C006A3F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 562CBAAA1BA3DD3C006A3F73 /* streampoint */;
+			targetProxy = 562CBAC41BA3DD3C006A3F73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		562CBAB71BA3DD3C006A3F73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				562CBAB81BA3DD3C006A3F73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		562CBABC1BA3DD3C006A3F73 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				562CBABD1BA3DD3C006A3F73 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		562CBACB1BA3DD3C006A3F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		562CBACC1BA3DD3C006A3F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		562CBACE1BA3DD3C006A3F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = streampoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		562CBACF1BA3DD3C006A3F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = streampoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		562CBAD11BA3DD3C006A3F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = streampointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/streampoint.app/streampoint";
+			};
+			name = Debug;
+		};
+		562CBAD21BA3DD3C006A3F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = streampointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/streampoint.app/streampoint";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		562CBAA61BA3DD3C006A3F73 /* Build configuration list for PBXProject "streampoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562CBACB1BA3DD3C006A3F73 /* Debug */,
+				562CBACC1BA3DD3C006A3F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		562CBACD1BA3DD3C006A3F73 /* Build configuration list for PBXNativeTarget "streampoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562CBACE1BA3DD3C006A3F73 /* Debug */,
+				562CBACF1BA3DD3C006A3F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		562CBAD01BA3DD3C006A3F73 /* Build configuration list for PBXNativeTarget "streampointTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				562CBAD11BA3DD3C006A3F73 /* Debug */,
+				562CBAD21BA3DD3C006A3F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		562CBAB21BA3DD3C006A3F73 /* streampoint.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				562CBAB31BA3DD3C006A3F73 /* streampoint.xcdatamodel */,
+			);
+			currentVersion = 562CBAB31BA3DD3C006A3F73 /* streampoint.xcdatamodel */;
+			path = streampoint.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 562CBAA31BA3DD3C006A3F73 /* Project object */;
+}

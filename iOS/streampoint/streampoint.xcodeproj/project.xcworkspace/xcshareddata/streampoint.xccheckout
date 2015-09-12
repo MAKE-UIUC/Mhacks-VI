@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>12EB6944-4531-46AF-858A-5341B6C517F9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>052086F9898D927266480CBA74E2C47F42E43A6D</key>
+		<string>https://github.com/MAKE-UIUC/Mhacks-VI.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/streampoint/streampoint.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>052086F9898D927266480CBA74E2C47F42E43A6D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MAKE-UIUC/Mhacks-VI.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>052086F9898D927266480CBA74E2C47F42E43A6D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>052086F9898D927266480CBA74E2C47F42E43A6D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mhacks-VI</string>
+		</dict>
+	</array>
+</dict>
+</plist>
