@@ -12,7 +12,8 @@ bing_api_key = ''
 with open('bing_api_key.txt') as f:
     bing_api_key = f.readline().strip()
     bing_api_key = base64.b64encode(':{0}'.format(bing_api_key))
-#    bing_api_key = base64.b64encode('{0}:{0}'.format(bing_api_key))
+
+past_results = {}
 
 @app.route('/')
 def index():
@@ -33,6 +34,15 @@ def process_text():
                 results = res1 + res2
                 return jsonify(results=results) 
 
+@app.route('/pick-image', methods=['POST', 'GET'])
+def pick_image():
+    error = None
+    if request.method == 'POST':
+        if request.form['id'] in past_results:
+            return jsonify(results=past_results[request.form['id']])
+        else:
+            return 'fail'
+
 def format_api_url(query, num):
     return 'https://api.datamarket.azure.com/Bing/Search/v1/Image?$format=json&$top={}&Query=%27{}%27&Options=%27DisableLocationDetection%27'.format(num, urllib.quote_plus(query))
 
@@ -50,6 +60,7 @@ def search_bing(query, num):
         res['src'] = obj['SourceUrl']
         res['title'] = obj['Title']
         results.append(res)
+        past_results[res['id']] = res
     return results
 
 if __name__ == "__main__":
