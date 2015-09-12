@@ -381,7 +381,7 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
-		var socket = $.websocket("localhost://127.0.0.1:4250/", {
+		var socket = $.websocket("localhost://127.0.0.1:4250/socket", {
           events: {
               message: function(e){
 								$('#content').append(e.data + '<br>')
