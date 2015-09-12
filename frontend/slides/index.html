@@ -43,6 +43,7 @@
 				<section>
 					<h1>MHacks VI</h1>
 					<h3>StreamPoint Presentation</h3>
+					<p1 id = "content"></p1>
 					<p>
 						<small>Created by <a href="http://hakim.se">MAKE</a> / <a href="http://twitter.com/hakimel">UIUC</a></small>
 					</p>
@@ -377,6 +378,17 @@ Reveal.addEventListener( 'customevent', function() {
 			</div>
 
 		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+		var socket = $.websocket("localhost://127.0.0.1:4250/", {
+          events: {
+              message: function(e){
+								$('#content').append(e.data + '<br>')
+							}
+          }
+      });
+			</script>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
