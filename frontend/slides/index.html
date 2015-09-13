@@ -41,7 +41,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section id = content0>
+				<section id = "content0">
 				</section>
 				<section>
 					<h1 id = "content1"></h1>
@@ -428,15 +428,15 @@ Reveal.addEventListener( 'customevent', function() {
 								var data = e.data;
 								if(data == 'sn'){
 										slide++;
-		        				simulateKeyPress('L');
+		        				$(".navigate-right").keypress();
 	  						}
 
 		            else if(data.charAt(0) == 'i'){
-									$('#content' + slide).append('<img src="' + data.substring(1) + '" style="width:600px;height:450px;">');
+									$('#content' + slide).append('<img src="' + data.slice(1,data.length) + '" style="width:600px;height:450px;">');
 								}
 
 		            else if(data.charAt(0) == 't'){
-									$('#content' + slide).append('"<p>' + data.substring(1) + '</p>"');
+									$('#content' + slide).append('"<p>' + data.slice(1,data.length) + '</p>"');
 								}
 							else{
 									console.log("Error with input splice");
