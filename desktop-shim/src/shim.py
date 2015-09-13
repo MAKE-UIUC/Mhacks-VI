@@ -48,6 +48,8 @@ class FrontendHandler(WebSocketServerProtocol):
         self.sendMessage('sp', False)
 
     def onClose(self, wasClean, code, reason):
+        global client
+        client = None
         print 'Websocket connection closed: {}'.format(reason)
 
 
@@ -84,21 +86,19 @@ class NetworkDiscoveryMulticastHandler(DatagramProtocol):
 
 class RemoteHandler(LineReceiver):
 
-    def __init__(self):
-        self.recv = client 
-
     def lineReceived(self, data):
         d = data.split(' ')
         print data
         cmd = d[0]
         if cmd == 'i':
-            if self.recv is not None:
-                self.recv.sendImage(data[1:])
+            if client is not None:
+                client.sendImage(data[1:])
         elif cmd == 't':
-            if self.recv is not None:
-                self.recv.sendText(data[1:])
+            if client is not None:
+                client.sendText(data[1:])
         elif cmd == 'sn':
-            self.recv.sendNextSlideCommand()
+            if client is not None:
+                client.sendNextSlideCommand()
         else:
             print 'unknown message {}'.format(data)
 

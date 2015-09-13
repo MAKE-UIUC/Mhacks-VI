@@ -76,11 +76,11 @@
 									<section id = "content0">
 										<iframe width = "800" height = "800"  src = "http://localhost:8000/stream.html"/>
 									</section>
-									<section>
-										<h1 id = "content1"></h1>
+									<section id = "content1">
+										<h1 id = "content1a"></h1>
 									</section>
-									<section>
-										<h1 id = "content2"></h1>
+									<section id = "content2">
+										<h1 id = "content2a"></h1>
 									</section>
 									<section>
 										<h1 id = "content3"></h1>
@@ -278,13 +278,14 @@
 							  jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
 							}
 
-					    			  var connection = new WebSocket("ws://35.3.5.97:4250/socket");
+					    			  var connection = new WebSocket("ws://127.0.0.1:4250/socket");
 					    			  connection.onopen = function() {
 					                connection.send('hello world');
 					     				     };
 
 					            connection.onmessage = function(e) {
-													var data = "thello hello";
+													var data = e.data;
+                                                    console.log(data);
 													if(data == 'sn'){
 															slide++;
 															console.log("keypress");
