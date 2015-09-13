@@ -25,6 +25,7 @@
 		56F5E65C1BA527D400665E2E /* splash screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E65B1BA527D400665E2E /* splash screen.png */; };
 		56F5E6621BA531B700665E2E /* SocketSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E6611BA531B700665E2E /* SocketSend.m */; };
 		56F5E6641BA5321D00665E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6631BA5321D00665E2E /* Foundation.framework */; };
+		56F5E6661BA55B4600665E2E /* input.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E6651BA55B4600665E2E /* input.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		56F5E6601BA531B700665E2E /* SocketSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketSend.h; path = ../SocketSend.h; sourceTree = "<group>"; };
 		56F5E6611BA531B700665E2E /* SocketSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketSend.m; path = ../SocketSend.m; sourceTree = "<group>"; };
 		56F5E6631BA5321D00665E2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56F5E6651BA55B4600665E2E /* input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input.png; path = ../../../assets/input.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				56F5E6601BA531B700665E2E /* SocketSend.h */,
 				56F5E6611BA531B700665E2E /* SocketSend.m */,
 				56F5E5E41BA47EA200665E2E /* Main.storyboard */,
+				56F5E6651BA55B4600665E2E /* input.png */,
 				56F5E6591BA524B100665E2E /* appicon 2.png */,
 				56F5E5E71BA47EA200665E2E /* Images.xcassets */,
 				56F5E5E91BA47EA200665E2E /* LaunchScreen.xib */,
@@ -250,6 +253,7 @@
 			files = (
 				56F5E65A1BA524B100665E2E /* appicon 2.png in Resources */,
 				56F5E5E61BA47EA200665E2E /* Main.storyboard in Resources */,
+				56F5E6661BA55B4600665E2E /* input.png in Resources */,
 				56F5E5EB1BA47EA200665E2E /* LaunchScreen.xib in Resources */,
 				56F5E5E81BA47EA200665E2E /* Images.xcassets in Resources */,
 				56F5E65C1BA527D400665E2E /* splash screen.png in Resources */,

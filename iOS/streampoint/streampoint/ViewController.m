@@ -79,34 +79,6 @@ BOOL recordState = FALSE;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)StartRecord:(id)sender {
-    if (recordState == FALSE)
-    {
-        self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
-                                                    detection:SKShortEndOfSpeechDetection
-                                                    language:@"en_US"
-                                                    delegate:self];
-
-        //Setting to recording green
-        self.RecordButton.backgroundColor = [UIColor colorWithRed:39.0f/255.0f
-                                                            green:153.0f/255.0f
-                                                             blue:1.0f/255.0f
-                                                            alpha:1.0f];
-        recordState = TRUE;
-        [self.RecordButton setTitle: @"Listening" forState:(UIControlStateNormal)];
-    }
-    else{
-        [self.voiceSearch stopRecording];
-        recordState = FALSE;
-
-        [self.RecordButton setTitle: @"Processing" forState:(UIControlStateNormal)];
-        //Setting to All good blue
-        self.RecordButton.backgroundColor = [UIColor colorWithRed:2.0f/255.0f
-                                                            green:65.0f/255.0f
-                                                             blue:255.0f/255.0f
-                                                            alpha:1.0f];
-    }
-}
 - (IBAction)NextSlide:(id)sender {
     //reset to red
     self.RecordButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f
@@ -114,5 +86,32 @@ BOOL recordState = FALSE;
                                                          blue:0.0f/255.0f
                                                         alpha:1.0f];
     [self.RecordButton setTitle: @"Record" forState:(UIControlStateNormal)];
+}
+
+- (IBAction)Record_Down:(id)sender {
+    self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
+                                               detection:SKShortEndOfSpeechDetection
+                                                language:@"en_US"
+                                                delegate:self];
+
+    //Setting to recording green
+    self.RecordButton.backgroundColor = [UIColor colorWithRed:39.0f/255.0f
+                                                        green:153.0f/255.0f
+                                                         blue:1.0f/255.0f
+                                                        alpha:1.0f];
+    recordState = TRUE;
+    [self.RecordButton setTitle: @"Listening" forState:(UIControlStateNormal)];
+}
+
+- (IBAction)Record_UpIn:(id)sender {
+    [self.voiceSearch stopRecording];
+    recordState = FALSE;
+
+    [self.RecordButton setTitle: @"Processing" forState:(UIControlStateNormal)];
+    //Setting to All good blue
+    self.RecordButton.backgroundColor = [UIColor colorWithRed:2.0f/255.0f
+                                                        green:65.0f/255.0f
+                                                         blue:255.0f/255.0f
+                                                        alpha:1.0f];
 }
 @end

@@ -43,7 +43,7 @@
                                     <action selector="NextSlide:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DaX-Xf-EoV"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-4P-Ngl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-4P-Ngl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="214" id="nBN-FC-WiW"/>
@@ -81,7 +81,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="StartRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lrW-6p-V1K"/>
+                                    <action selector="Record_Down:" destination="vXZ-lx-hvc" eventType="touchDown" id="DWh-b8-eWY"/>
+                                    <action selector="Record_UpIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aTz-dQ-X7u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-Uv-qDk">
@@ -217,6 +218,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appicon 2.png" width="960" height="960"/>
+        <image name="input.png" width="640" height="413"/>
     </resources>
 </document>
