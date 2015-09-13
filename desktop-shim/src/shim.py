@@ -96,6 +96,8 @@ class RemoteHandler(LineReceiver):
         elif cmd == 't':
             if self.recv is not None:
                 self.recv.sendText(d[1])
+        elif cmd == 'sn':
+            self.recv.sendNextSlideCommand()
         else:
             print 'unknown message {}'.format(data)
 
