@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from alchemyapi import AlchemyAPI
+from wolframapi import query_wolfram
+from google import images
 import requests
 import urllib
 import base64
@@ -38,7 +40,13 @@ def process_text():
 def process_keyword():
     error = None
     if request.method == 'POST':
-        return jsonify(results=search_bing(request.form['text'], 5))
+        print request.form['text']
+        ret = search_google(request.form['text'], 1)
+        w = query_wolfram(request.form['text'])[1]
+        for r in ret:
+            r['wolfram'] = w
+        print ret
+        return jsonify(results=ret)
 
 @app.route('/pick-image', methods=['POST', 'GET'])
 def pick_image():
@@ -51,6 +59,18 @@ def pick_image():
 
 def format_api_url(query, num):
     return 'https://api.datamarket.azure.com/Bing/Search/v1/Image?$format=json&$top={}&Query=%27{}%27&Options=%27DisableLocationDetection%27'.format(num, urllib.quote_plus(query))
+
+def search_google(query, num):
+    imgs = images(query, num)
+    ret = []
+    for obj in imgs:
+        res = {}
+        res['id'] = obj['imageId']
+        res['img'] = obj['unescapedUrl']
+        res['src'] = obj['originalContextUrl']
+        res['title'] = obj['title']
+        ret.append(res)
+    return ret
 
 def search_bing(query, num):
     url = format_api_url(query, num)

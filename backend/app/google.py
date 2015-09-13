@@ -10,5 +10,3 @@ def images(query, results_per_page):
     for index in xrange(results_per_page):
         result_array.append(j["responseData"]["results"][index])
     return result_array
-
-print images("Andrew Kuznetsov at Illinois", 5)
