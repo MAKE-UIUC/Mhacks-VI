@@ -26,6 +26,7 @@
 		56F5E6621BA531B700665E2E /* SocketSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E6611BA531B700665E2E /* SocketSend.m */; };
 		56F5E6641BA5321D00665E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6631BA5321D00665E2E /* Foundation.framework */; };
 		56F5E6661BA55B4600665E2E /* input.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E6651BA55B4600665E2E /* input.png */; };
+		56F5E6691BA563EC00665E2E /* PostRequestHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E6681BA563EC00665E2E /* PostRequestHelp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		56F5E6611BA531B700665E2E /* SocketSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketSend.m; path = ../SocketSend.m; sourceTree = "<group>"; };
 		56F5E6631BA5321D00665E2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56F5E6651BA55B4600665E2E /* input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input.png; path = ../../../assets/input.png; sourceTree = "<group>"; };
+		56F5E6671BA563EC00665E2E /* PostRequestHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostRequestHelp.h; sourceTree = "<group>"; };
+		56F5E6681BA563EC00665E2E /* PostRequestHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostRequestHelp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				56F5E5E21BA47EA200665E2E /* ViewController.m */,
 				56F5E6601BA531B700665E2E /* SocketSend.h */,
 				56F5E6611BA531B700665E2E /* SocketSend.m */,
+				56F5E6671BA563EC00665E2E /* PostRequestHelp.h */,
+				56F5E6681BA563EC00665E2E /* PostRequestHelp.m */,
 				56F5E5E41BA47EA200665E2E /* Main.storyboard */,
 				56F5E6651BA55B4600665E2E /* input.png */,
 				56F5E6591BA524B100665E2E /* appicon 2.png */,
@@ -278,6 +283,7 @@
 				56F5E5DD1BA47EA200665E2E /* AppDelegate.m in Sources */,
 				56F5E5E01BA47EA200665E2E /* streampoint.xcdatamodeld in Sources */,
 				56F5E5E31BA47EA200665E2E /* ViewController.m in Sources */,
+				56F5E6691BA563EC00665E2E /* PostRequestHelp.m in Sources */,
 				56F5E5DA1BA47EA200665E2E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

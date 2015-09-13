@@ -59,7 +59,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxc-TJ-eXZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Uxc-TJ-eXZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -85,14 +85,14 @@
                                     <action selector="Record_UpIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aTz-dQ-X7u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-Uv-qDk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-Uv-qDk">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WsG-Uv-qDk" secondAttribute="height" multiplier="5:3" id="jst-Kj-8I5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
-                                <state key="normal" title="Quote Me">
+                                <state key="normal" title="Ask Wolfram">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -208,6 +208,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="AskWolfram" destination="WsG-Uv-qDk" id="B6f-mo-mDO"/>
+                        <outlet property="ImageDisp" destination="gtT-4P-Ngl" id="Raw-J3-SeE"/>
                         <outlet property="RecordButton" destination="Uxc-TJ-eXZ" id="h2e-Z5-VuZ"/>
                         <outlet property="recordButton" destination="Uxc-TJ-eXZ" id="dvF-A9-kjc"/>
                     </connections>
