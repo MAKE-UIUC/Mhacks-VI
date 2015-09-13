@@ -438,7 +438,8 @@ $( "#content0" ).click(function() {
      				     };
 
             connection.onmessage = function(e) {
-								var data = "thello hello";
+								var data = e.data;
+                                console.log(data);
 								if(data == 'sn'){
 										slide++;
 										console.log("keypress");
