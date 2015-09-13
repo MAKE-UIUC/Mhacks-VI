@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E3FE74B8-9284-4663-9599-9F9DA9E7419D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>streampoint</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>052086F9898D927266480CBA74E2C47F42E43A6D</key>
 		<string>https://github.com/MAKE-UIUC/Mhacks-VI.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS/streampoint/streampoint.xcodeproj/project.xcworkspace</string>
+	<string>iOS/streampoint/streampoint.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>052086F9898D927266480CBA74E2C47F42E43A6D</key>

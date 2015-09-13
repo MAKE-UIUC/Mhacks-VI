@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <SpeechKit/SpeechKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,7 +20,9 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (void)setupSpeechKitConnection;
 
 
 @end
+
 
