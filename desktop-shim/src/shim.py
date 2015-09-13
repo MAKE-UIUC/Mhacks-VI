@@ -84,7 +84,7 @@ class NetworkDiscoveryMulticastHandler(DatagramProtocol):
 class RemoteHandler(LineReceiver):
 
     def __init__(self):
-        self.recv = client 
+        self.recv = client
 
     def lineReceived(self, data):
         d = data.split(' ')
