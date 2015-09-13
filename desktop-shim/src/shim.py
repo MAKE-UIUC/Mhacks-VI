@@ -21,6 +21,7 @@ client = None
 class FrontendHandler(WebSocketServerProtocol):
 
     def __init__(self):
+        WebSocketServerProtocol.__init__(self)
         global client
         client = self
 
@@ -84,7 +85,7 @@ class NetworkDiscoveryMulticastHandler(DatagramProtocol):
 class RemoteHandler(LineReceiver):
 
     def __init__(self):
-        self.recv = client
+        self.recv = client 
 
     def lineReceived(self, data):
         d = data.split(' ')
@@ -92,10 +93,12 @@ class RemoteHandler(LineReceiver):
         cmd = d[0]
         if cmd == 'i':
             if self.recv is not None:
-                self.recv.sendImage(d[1])
+                self.recv.sendImage(data[1:])
         elif cmd == 't':
             if self.recv is not None:
-                self.recv.sendText(d[1])
+                self.recv.sendText(data[1:])
+        elif cmd == 'sn':
+            self.recv.sendNextSlideCommand()
         else:
             print 'unknown message {}'.format(data)
 
