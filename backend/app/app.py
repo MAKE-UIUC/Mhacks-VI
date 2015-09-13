@@ -34,6 +34,12 @@ def process_text():
                 results = res1 + res2
                 return jsonify(results=results) 
 
+@app.route('/process-keyword', methods=['POST', 'GET'])
+def process_keyword():
+    error = None
+    if request.method == 'POST':
+        return jsonify(results=search_bing(request.form['text']))
+
 @app.route('/pick-image', methods=['POST', 'GET'])
 def pick_image():
     error = None
