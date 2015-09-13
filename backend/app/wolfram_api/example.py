@@ -31,19 +31,24 @@ def query_wolfram(wolfram_input, appid = "3RQELJ-AAYLR3X3WQ", base_url='http://a
 
     input_interpretation_index = None
     input_information_index = None
+    input_index = None
 
     try: 
         input_interpretation_index = list(data_dict.keys()).index('Input interpretation')
     except:
         input_interpretation_index = None
+    try: 
+        input_index = list(data_dict.keys()).index('Input')
+    except:
+        input_index = None    
     try:
         input_information_index = list(data_dict.keys()).index('Input information')
     except:
         input_information_index = None
 
-    if input_interpretation_index == 0 or input_information_index == 0:
+    if input_interpretation_index == 0 or input_information_index == 0 or input_index == 0:
         result_output = data_dict[list(data_dict.keys())[1]]
-    elif  input_interpretation_index == 0 or input_information_index == 1:
+    elif  input_interpretation_index == 0 or input_information_index == 1 or input_index == 1:
         result_output = data_dict[list(data_dict.keys())[0]]
     else:
         pass
@@ -52,4 +57,4 @@ def query_wolfram(wolfram_input, appid = "3RQELJ-AAYLR3X3WQ", base_url='http://a
 # print query_wolfram("How old is Barack Obama")[1]
 # print query_wolfram("Population of Africa")[1]
 # print query_wolfram("moving from Urbana to San Francisco with a salary of $250,000")[1]
-print query_wolfram("Most educated city in united states")[1]
+print query_wolfram("Information about Barack Obama")[1]

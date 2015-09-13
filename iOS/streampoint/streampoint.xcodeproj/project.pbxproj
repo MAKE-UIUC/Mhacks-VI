@@ -15,6 +15,17 @@
 		56F5E5E81BA47EA200665E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E5E71BA47EA200665E2E /* Images.xcassets */; };
 		56F5E5EB1BA47EA200665E2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E5E91BA47EA200665E2E /* LaunchScreen.xib */; };
 		56F5E5F71BA47EA200665E2E /* streampointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E5F61BA47EA200665E2E /* streampointTests.m */; };
+		56F5E6011BA4BE9300665E2E /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6001BA4BE9300665E2E /* SpeechKit.framework */; };
+		56F5E64A1BA51A5500665E2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6491BA51A5500665E2E /* AudioToolbox.framework */; };
+		56F5E64C1BA51A5C00665E2E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E64B1BA51A5C00665E2E /* AVFoundation.framework */; };
+		56F5E6541BA51A8200665E2E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6531BA51A8200665E2E /* Security.framework */; };
+		56F5E6561BA51A8E00665E2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6551BA51A8E00665E2E /* SystemConfiguration.framework */; };
+		56F5E6581BA51A9600665E2E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6571BA51A9600665E2E /* CFNetwork.framework */; };
+		56F5E65A1BA524B100665E2E /* appicon 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E6591BA524B100665E2E /* appicon 2.png */; };
+		56F5E65C1BA527D400665E2E /* splash screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E65B1BA527D400665E2E /* splash screen.png */; };
+		56F5E6621BA531B700665E2E /* SocketSend.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5E6611BA531B700665E2E /* SocketSend.m */; };
+		56F5E6641BA5321D00665E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F5E6631BA5321D00665E2E /* Foundation.framework */; };
+		56F5E6661BA55B4600665E2E /* input.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F5E6651BA55B4600665E2E /* input.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +53,21 @@
 		56F5E5F01BA47EA200665E2E /* streampointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = streampointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F5E5F51BA47EA200665E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F5E5F61BA47EA200665E2E /* streampointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streampointTests.m; sourceTree = "<group>"; };
+		56F5E6001BA4BE9300665E2E /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = ../../../../Downloads/DragonMobileSDK_1.4.19/SpeechKit.framework; sourceTree = "<group>"; };
+		56F5E6491BA51A5500665E2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		56F5E64B1BA51A5C00665E2E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		56F5E64D1BA51A6800665E2E /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		56F5E64F1BA51A6F00665E2E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		56F5E6511BA51A7900665E2E /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		56F5E6531BA51A8200665E2E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		56F5E6551BA51A8E00665E2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		56F5E6571BA51A9600665E2E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		56F5E6591BA524B100665E2E /* appicon 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon 2.png"; path = "../../../assets/appicon 2.png"; sourceTree = "<group>"; };
+		56F5E65B1BA527D400665E2E /* splash screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash screen.png"; path = "../../../assets/splash screen.png"; sourceTree = "<group>"; };
+		56F5E6601BA531B700665E2E /* SocketSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketSend.h; path = ../SocketSend.h; sourceTree = "<group>"; };
+		56F5E6611BA531B700665E2E /* SocketSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketSend.m; path = ../SocketSend.m; sourceTree = "<group>"; };
+		56F5E6631BA5321D00665E2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56F5E6651BA55B4600665E2E /* input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input.png; path = ../../../assets/input.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +75,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F5E6641BA5321D00665E2E /* Foundation.framework in Frameworks */,
+				56F5E64A1BA51A5500665E2E /* AudioToolbox.framework in Frameworks */,
+				56F5E64C1BA51A5C00665E2E /* AVFoundation.framework in Frameworks */,
+				56F5E6541BA51A8200665E2E /* Security.framework in Frameworks */,
+				56F5E6561BA51A8E00665E2E /* SystemConfiguration.framework in Frameworks */,
+				56F5E6581BA51A9600665E2E /* CFNetwork.framework in Frameworks */,
+				56F5E6011BA4BE9300665E2E /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +98,16 @@
 		56F5E5CB1BA47EA200665E2E = {
 			isa = PBXGroup;
 			children = (
+				56F5E6631BA5321D00665E2E /* Foundation.framework */,
+				56F5E6571BA51A9600665E2E /* CFNetwork.framework */,
+				56F5E6551BA51A8E00665E2E /* SystemConfiguration.framework */,
+				56F5E6531BA51A8200665E2E /* Security.framework */,
+				56F5E6511BA51A7900665E2E /* AudioUnit.framework */,
+				56F5E64F1BA51A6F00665E2E /* CoreAudio.framework */,
+				56F5E64D1BA51A6800665E2E /* CoreAudioKit.framework */,
+				56F5E64B1BA51A5C00665E2E /* AVFoundation.framework */,
+				56F5E6491BA51A5500665E2E /* AudioToolbox.framework */,
+				56F5E6001BA4BE9300665E2E /* SpeechKit.framework */,
 				56F5E5D61BA47EA200665E2E /* streampoint */,
 				56F5E5F31BA47EA200665E2E /* streampointTests */,
 				56F5E5D51BA47EA200665E2E /* Products */,
@@ -87,9 +130,14 @@
 				56F5E5DC1BA47EA200665E2E /* AppDelegate.m */,
 				56F5E5E11BA47EA200665E2E /* ViewController.h */,
 				56F5E5E21BA47EA200665E2E /* ViewController.m */,
+				56F5E6601BA531B700665E2E /* SocketSend.h */,
+				56F5E6611BA531B700665E2E /* SocketSend.m */,
 				56F5E5E41BA47EA200665E2E /* Main.storyboard */,
+				56F5E6651BA55B4600665E2E /* input.png */,
+				56F5E6591BA524B100665E2E /* appicon 2.png */,
 				56F5E5E71BA47EA200665E2E /* Images.xcassets */,
 				56F5E5E91BA47EA200665E2E /* LaunchScreen.xib */,
+				56F5E65B1BA527D400665E2E /* splash screen.png */,
 				56F5E5DE1BA47EA200665E2E /* streampoint.xcdatamodeld */,
 				56F5E5D71BA47EA200665E2E /* Supporting Files */,
 			);
@@ -171,6 +219,7 @@
 				TargetAttributes = {
 					56F5E5D31BA47EA200665E2E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = C2MNEVAM4L;
 					};
 					56F5E5EF1BA47EA200665E2E = {
 						CreatedOnToolsVersion = 6.4;
@@ -202,9 +251,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F5E65A1BA524B100665E2E /* appicon 2.png in Resources */,
 				56F5E5E61BA47EA200665E2E /* Main.storyboard in Resources */,
+				56F5E6661BA55B4600665E2E /* input.png in Resources */,
 				56F5E5EB1BA47EA200665E2E /* LaunchScreen.xib in Resources */,
 				56F5E5E81BA47EA200665E2E /* Images.xcassets in Resources */,
+				56F5E65C1BA527D400665E2E /* splash screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F5E6621BA531B700665E2E /* SocketSend.m in Sources */,
 				56F5E5DD1BA47EA200665E2E /* AppDelegate.m in Sources */,
 				56F5E5E01BA47EA200665E2E /* streampoint.xcdatamodeld in Sources */,
 				56F5E5E31BA47EA200665E2E /* ViewController.m in Sources */,
@@ -351,6 +404,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/akmodi/Downloads/DragonMobileSDK_1.4.19,
+				);
 				INFOPLIST_FILE = streampoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/akmodi/Downloads/DragonMobileSDK_1.4.19,
+				);
 				INFOPLIST_FILE = streampoint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +485,7 @@
 				56F5E5FC1BA47EA200665E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56F5E5FD1BA47EA200665E2E /* Build configuration list for PBXNativeTarget "streampointTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +494,7 @@
 				56F5E5FF1BA47EA200665E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
