@@ -8,9 +8,10 @@ def images(query, results_per_page):
     j = json.loads(r.text)
     result_array = []
     for index in xrange(results_per_page):
-        result_array.append(print j["responseData"]["results"][index]["url"])
+        string = j["responseData"]["results"][index]["url"]
+        result_array.append(string.encode("utf8"))
     return result_array
 
-images("Andrew Kuznetsov at Illinois", 5)
+print images("Andrew Kuznetsov at Illinois", 5)
 
 
