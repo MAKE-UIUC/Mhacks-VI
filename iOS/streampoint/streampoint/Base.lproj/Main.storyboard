@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,206 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-4r-mlk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.81796480429292928" green="0.81796480429292928" blue="0.81796480429292928" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="RaA-WV-LB3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="32"/>
+                                <state key="normal" title="Next Slide">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RaA-WV-LB3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RaA-WV-LB3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="NextSlide:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DaX-Xf-EoV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-4P-Ngl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="nBN-FC-WiW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nBN-FC-WiW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nBN-FC-WiW"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxc-TJ-eXZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="P3i-Z1-rhk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="P3i-Z1-rhk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="P3i-Z1-rhk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="StartRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lrW-6p-V1K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-Uv-qDk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WsG-Uv-qDk" secondAttribute="height" multiplier="5:3" id="jst-Kj-8I5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                <state key="normal" title="Quote Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jst-Kj-8I5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jst-Kj-8I5"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7g-pu-ryY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k7g-pu-ryY" secondAttribute="height" multiplier="5:3" id="WFh-J6-y2A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                <state key="normal" title="Quote Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WFh-J6-y2A"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WFh-J6-y2A"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gtT-4P-Ngl" secondAttribute="trailing" constant="-16" id="0AT-Yc-9kI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k7g-pu-ryY" secondAttribute="trailing" constant="-16" id="3bQ-Pk-nvI"/>
+                            <constraint firstItem="k7g-pu-ryY" firstAttribute="top" secondItem="BZs-4r-mlk" secondAttribute="bottom" constant="8" id="3kG-wh-cVB"/>
+                            <constraint firstItem="gtT-4P-Ngl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5CU-OY-dD3"/>
+                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="top" secondItem="k7g-pu-ryY" secondAttribute="bottom" constant="8" id="DXL-SK-yZa"/>
+                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="JY8-eL-PCQ"/>
+                            <constraint firstItem="BZs-4r-mlk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="MEp-Qo-84q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BZs-4r-mlk" secondAttribute="trailing" constant="-16" id="Obx-Yq-UfB"/>
+                            <constraint firstItem="k7g-pu-ryY" firstAttribute="leading" secondItem="WsG-Uv-qDk" secondAttribute="trailing" id="VgG-Lf-fkV"/>
+                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="top" secondItem="WsG-Uv-qDk" secondAttribute="bottom" constant="8" id="c1j-TO-x2P"/>
+                            <constraint firstItem="WsG-Uv-qDk" firstAttribute="top" secondItem="BZs-4r-mlk" secondAttribute="bottom" constant="8" id="ots-5Q-Ugy"/>
+                            <constraint firstItem="gtT-4P-Ngl" firstAttribute="top" secondItem="Uxc-TJ-eXZ" secondAttribute="bottom" id="rzw-Fg-P7h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uxc-TJ-eXZ" secondAttribute="trailing" constant="-16" id="s2N-5D-yex"/>
+                            <constraint firstItem="WsG-Uv-qDk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="sIE-Z0-OdM"/>
+                            <constraint firstItem="BZs-4r-mlk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="tXd-PR-g9L"/>
+                            <constraint firstItem="k7g-pu-ryY" firstAttribute="leading" secondItem="WsG-Uv-qDk" secondAttribute="trailing" id="wP2-f1-BbP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gtT-4P-Ngl" secondAttribute="bottom" id="yfO-sQ-KBk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BZs-4r-mlk"/>
+                                <exclude reference="gtT-4P-Ngl"/>
+                                <exclude reference="Uxc-TJ-eXZ"/>
+                                <exclude reference="WsG-Uv-qDk"/>
+                                <exclude reference="k7g-pu-ryY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MEp-Qo-84q"/>
+                                <exclude reference="Obx-Yq-UfB"/>
+                                <exclude reference="tXd-PR-g9L"/>
+                                <exclude reference="ots-5Q-Ugy"/>
+                                <exclude reference="sIE-Z0-OdM"/>
+                                <exclude reference="3bQ-Pk-nvI"/>
+                                <exclude reference="3kG-wh-cVB"/>
+                                <exclude reference="VgG-Lf-fkV"/>
+                                <exclude reference="wP2-f1-BbP"/>
+                                <exclude reference="DXL-SK-yZa"/>
+                                <exclude reference="JY8-eL-PCQ"/>
+                                <exclude reference="c1j-TO-x2P"/>
+                                <exclude reference="s2N-5D-yex"/>
+                                <exclude reference="0AT-Yc-9kI"/>
+                                <exclude reference="5CU-OY-dD3"/>
+                                <exclude reference="rzw-Fg-P7h"/>
+                                <exclude reference="yfO-sQ-KBk"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BZs-4r-mlk"/>
+                                <include reference="gtT-4P-Ngl"/>
+                                <include reference="Uxc-TJ-eXZ"/>
+                                <include reference="WsG-Uv-qDk"/>
+                                <include reference="k7g-pu-ryY"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MEp-Qo-84q"/>
+                                <include reference="Obx-Yq-UfB"/>
+                                <include reference="tXd-PR-g9L"/>
+                                <include reference="ots-5Q-Ugy"/>
+                                <include reference="sIE-Z0-OdM"/>
+                                <include reference="3bQ-Pk-nvI"/>
+                                <include reference="3kG-wh-cVB"/>
+                                <exclude reference="VgG-Lf-fkV"/>
+                                <include reference="wP2-f1-BbP"/>
+                                <include reference="DXL-SK-yZa"/>
+                                <include reference="JY8-eL-PCQ"/>
+                                <include reference="c1j-TO-x2P"/>
+                                <include reference="s2N-5D-yex"/>
+                                <include reference="0AT-Yc-9kI"/>
+                                <include reference="5CU-OY-dD3"/>
+                                <include reference="rzw-Fg-P7h"/>
+                                <include reference="yfO-sQ-KBk"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="RecordButton" destination="Uxc-TJ-eXZ" id="h2e-Z5-VuZ"/>
+                        <outlet property="recordButton" destination="Uxc-TJ-eXZ" id="dvF-A9-kjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="324" y="363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appicon 2.png" width="960" height="960"/>
+    </resources>
 </document>

@@ -124,4 +124,13 @@
     }
 }
 
+- (void)setupSpeechKitConnection {
+    [SpeechKit setupWithID: @"NMDPTRIAL_modi95_outlook_com20150912130406"
+                      host: @"sandbox.nmdp.nuancemobility.net"
+                      port: 443
+                    useSSL: NO
+                  delegate: nil];
+
+}
+
 @end
