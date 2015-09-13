@@ -34,6 +34,18 @@ class FrontendHandler(WebSocketServerProtocol):
         self.sendMessage(payload, isBinary)
         print 'received message'
 
+    def sendText(self, text):
+        self.sendMessage('t' + text, False)
+
+    def sendImage(self, url):
+        self.sendMessage('i' + url, False)
+
+    def sendNextSlideCommand(self):
+        self.sendMessage('sn', False)
+
+    def sendPrevSlideCommand(self):
+        self.sendMessage('sp', False)
+
     def onClose(self, wasClean, code, reason):
         print 'Websocket connection closed: {}'.format(reason)
 
@@ -71,13 +83,25 @@ class NetworkDiscoveryMulticastHandler(DatagramProtocol):
 
 class RemoteHandler(LineReceiver):
 
+    def __init__(self):
+        self.recv = client 
+
     def lineReceived(self, data):
-        pass
+        d = data.split(' ')
+        print data
+        cmd = d[0]
+        if cmd == 'i':
+            if self.recv is not None:
+                self.recv.sendImage(d[1])
+        elif cmd == 't':
+            if self.recv is not None:
+                self.recv.sendText(d[1])
+        else:
+            print 'unknown message {}'.format(data)
 
     def connectionMade(self):
         peer = self.transport.getPeer()
         print 'Client {0}:{1} connected'.format(peer.host, peer.port)
-        self.transport.write('lol\r\n')
 
     def connectionLost(self, reason):
         peer = self.transport.getPeer()
@@ -98,5 +122,10 @@ if __name__ == '__main__':
     factory = WebSocketServerFactory('ws://127.0.0.1:4250/socket', debug=True)
     factory.protocol = FrontendHandler
     reactor.listenTCP(4250, factory)
+
+    # Sockets
+    factory = Factory()
+    factory.protocol = RemoteHandler
+    reactor.listenTCP(4252, factory)
 
     reactor.run()
