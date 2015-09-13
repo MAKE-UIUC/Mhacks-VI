@@ -21,6 +21,7 @@ client = None
 class FrontendHandler(WebSocketServerProtocol):
 
     def __init__(self):
+        WebSocketServerProtocol.__init__(self)
         global client
         client = self
 
