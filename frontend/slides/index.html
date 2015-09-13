@@ -381,14 +381,15 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
-		var socket = $.websocket("localhost://127.0.0.1:4250/socket", {
-          events: {
-              message: function(e){
-								$('#content').append(e.data + '<br>')
-							}
-          }
-      });
-			</script>
+            var connection = new WebSocket("ws://127.0.0.1:4250/socket");
+            connection.onopen = function() {
+                connection.send('hello world');
+            };
+
+            connection.onmessage = function(e) {
+                $('#content').append(e.data + '<br>');
+            };
+		</script>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>

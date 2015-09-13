@@ -87,7 +87,7 @@ class RemoteHandler(LineReceiver):
 if __name__ == '__main__':
     # Network discovery
     protocol = NetworkDiscoveryHandler()
-    reactor.listenUDP(0, protocol)
+    # reactor.listenUDP(0, protocol)
 
     """
     protocol = NetworkDiscoveryMulticastHandler()
