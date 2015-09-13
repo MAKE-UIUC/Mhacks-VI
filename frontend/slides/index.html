@@ -415,6 +415,19 @@ Reveal.addEventListener( 'customevent', function() {
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 		var slide = 0;
+/*
+var data = "thello hello";
+if(data.charAt(0) == 't'){
+	$('#content' + slide).append('<p>' + data.slice(1,data.length) + '</p>');
+}
+*/
+/*
+$( "#content0" ).click(function() {
+	console.log("keypress");
+	$('.navigate-right').click();
+});
+*/
+
 		function simulateKeyPress(character) {
 		  jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
 		}
@@ -425,18 +438,19 @@ Reveal.addEventListener( 'customevent', function() {
      				     };
 
             connection.onmessage = function(e) {
-								var data = e.data;
+								var data = "thello hello";
 								if(data == 'sn'){
 										slide++;
-		        				$(".navigate-right").keypress();
+										console.log("keypress");
+										$('.navigate-right').click();
 	  						}
 
 		            else if(data.charAt(0) == 'i'){
-									$('#content' + slide).append('<img src="' + data.slice(1,data.length) + '" style="width:600px;height:450px;">');
+									$('#content' + slide).append('<img src=' + data.slice(1,data.length) + ' style="width:600px;height:450px;">');
 								}
 
-		            else if(data.charAt(0) == 't'){
-									$('#content' + slide).append('"<p>' + data.slice(1,data.length) + '</p>"');
+								else if(data.charAt(0) == 't'){
+									$('#content' + slide).append('<p>' + data.slice(1,data.length) + '</p>');
 								}
 							else{
 									console.log("Error with input splice");
