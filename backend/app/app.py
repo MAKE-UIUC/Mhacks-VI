@@ -38,7 +38,7 @@ def process_text():
 def process_keyword():
     error = None
     if request.method == 'POST':
-        return jsonify(results=search_bing(request.form['text']))
+        return jsonify(results=search_bing(request.form['text'], 5))
 
 @app.route('/pick-image', methods=['POST', 'GET'])
 def pick_image():
