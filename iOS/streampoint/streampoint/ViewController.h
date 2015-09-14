@@ -25,6 +25,9 @@
 - (void)createRequest:(NSString*)url singleval:(NSString*)val singlearg:(NSString*)arg;
 @property (weak, nonatomic) IBOutlet UIImageView *ImageDisp;
 @property (weak, nonatomic) IBOutlet UIButton *AskWolfram;
+- (IBAction)ChangeSlide:(id)sender;
+- (IBAction)SendWolfram:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *SendQuote;
 
 @end
 

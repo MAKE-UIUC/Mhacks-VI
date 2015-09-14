@@ -31,8 +31,7 @@ BOOL recordState = FALSE;
     comms = [[SocketSend alloc] init];
     defInput = [self.ImageDisp image];
 
-    comms->host = @"35.3.5.97";
-//    comms->host = @"127.0.0.1";
+    comms->host = @"35.3.110.65";
     comms->port = 4252;
 
     [comms setup];
@@ -61,7 +60,7 @@ BOOL recordState = FALSE;
         NSString *keyword = [results firstResult];
         NSString *keywordReq = [@"t " stringByAppendingString:keyword];
         keywordReq = [keywordReq stringByAppendingString:@"\r\n"];
-        [self createRequest:@"http://35.3.5.97:5000/process-keyword" singleval:@"text" singlearg:keyword];
+        [self createRequest:@"http://104.131.69.59:5000/process-keyword" singleval:@"text" singlearg:keyword];
     }
 
     if (self.voiceSearch) {
@@ -91,12 +90,14 @@ BOOL recordState = FALSE;
                                                          blue:0.0f/255.0f
                                                         alpha:1.0f];
     imagePath = [@"i " stringByAppendingString:imagePath];
-    imagePath = [imagePath stringByAppendingString:@"\n"];
+    imagePath = [imagePath stringByAppendingString:@"\r\n"];
     [comms writeOut:imagePath];
     [self.RecordButton setTitle: @"Record" forState:(UIControlStateNormal)];
     [self.ImageDisp setImage:defInput];
     [self.AskWolfram setTitle:@"AskWolfram" forState:UIControlStateNormal];
 }
+
+
 
 - (IBAction)Record_Down:(id)sender {
     self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
@@ -132,7 +133,7 @@ BOOL recordState = FALSE;
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
 
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://35.3.5.97:5000/process-keyword"]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://104.131.69.59:5000/process-keyword"]];
 
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
@@ -165,5 +166,14 @@ BOOL recordState = FALSE;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response:(NSData*)data{
     NSLog(@"\n\nRECEIVED POST\n\n");
+}
+- (IBAction)ChangeSlide:(id)sender {
+    [comms writeOut:@"sn\r\n"];
+}
+
+- (IBAction)SendWolfram:(id)sender {
+    NSString* wolfq = [[@"t " stringByAppendingString:self.AskWolfram.currentTitle] stringByAppendingString:@"\r\n"];
+    [comms writeOut:wolfq];
+    return;
 }
 @end
