@@ -1,7 +1,7 @@
 # StreamPoint
 ####MHacks V
 
-It takes a huge amount of time and effort to put together a good presentation. Sometimes the presenter simply does not have the time to put in this time and effort. Somes the presentation simply needs to be winged. Until now, it has not been feesable to create a slide deck for a winged presentation. We're going to try to fix this problem.
+Lecturers often have to invest huge amounts of time in order to build simple slide decks for presentations. Our app uses Natural Language Processing and Machine Translation through a Web App in order to generate slides on the fly as a speaker talks. By using Entity Extraction and Sentiment Analysis through the AlchemyAPI library, we are able to accurately construct structured slides that are topical to your talk!
 
 <p align="center"><img src="assets/appicon.png" width="500"></p>
 
@@ -13,7 +13,9 @@ Our mobile application takes your location and automatically aggregates the clos
 <p align="center"><img src="assets/iOS App.png" width="200"></p>
 
 ##Web App
-Need to add write up.
+Our web app uses jquery libraries in order to create a slide interface that includes a macro view of your presentation, different presentation layouts and settings, and options for dynamic features.
+
+
 
 ##Backend
 Need to add write up.
