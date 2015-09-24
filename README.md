@@ -14,11 +14,18 @@ Our mobile application takes your location and automatically aggregates the clos
 
 ##Web App
 Our web app integrates several libraries in order to create a slide interface that includes a macro view of your presentation, different presentation layouts and settings, and options for dynamic features.
+<p><img src="https://cloud.githubusercontent.com/assets/7456865/10069520/6480a5dc-6272-11e5-8579-cd5710e7df93.png" width="500"></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/7456865/10069529/6b6ebc1c-6272-11e5-8c24-3e73a48fd79b.png" width="500"></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/7456865/10069530/6f9dcd28-6272-11e5-9a98-607507fb262f.png" width="500"></p>
 
 
 
 ##Backend
-Need to add write up.
+We created a RESTful API incorporating several external resources in order to run machine-translated text through an NLP algorithm. We used a modified library in the IOS app that sent text information to an AlchemyAPI call, which gave us sentiment scores and entity extractions. We then used the Bing Image API in order to predict which image best supported the presentation and used heuristics in order to place the image or raw text in the correct places on the slides. 
+
+Due to the number of requests, we used a local shim script as an in-between layer in order to facilitate the transfer of information from the ios app to the web app. Due to the nature of presentations, we used sockets as opposed to api requests in order to transfer information from the frontends to the backend. We also used the UDP protocol in order to ensure that our iphone would be able to connect properly to our API.
 
 
 ##Check Us Out
