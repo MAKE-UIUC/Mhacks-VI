@@ -13,7 +13,7 @@ Our mobile application takes your location and automatically aggregates the clos
 <p align="center"><img src="assets/iOS App.png" width="200"></p>
 
 ##Web App
-Our web app uses jquery libraries in order to create a slide interface that includes a macro view of your presentation, different presentation layouts and settings, and options for dynamic features.
+Our web app integrates several libraries in order to create a slide interface that includes a macro view of your presentation, different presentation layouts and settings, and options for dynamic features.
 
 
 
