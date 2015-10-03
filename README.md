@@ -8,9 +8,13 @@ Lecturers often have to invest huge amounts of time in order to build simple sli
 Using vocal transcription and NLP, streampoint generates a slidedeck for the presenter as he tells his story. With content powered by the Bing Image API, Stream, WolframAlpha, and Azure, we enable you to show the audience your ideas without looking up anything, demonstrate physical components without passing anything around, and impress your crowd without memorizing (or knowing for that matter) a single fact.
 
 ##iOS App
-Our mobile application takes your location and automatically aggregates the closest clinics that have your required medication. Information is accurate and up-to-date so that you can rest easy!
+Our iOS app is first and formost, your presentation clicker. It shows a preview of elements that you can add to your slide and allows you to send these elements to your slide. This includes pictures sourced from Bing images, information from Wolfram|Alpha and finally, quotes of what you've said.
 
 <p align="center"><img src="assets/iOS App.png" width="200"></p>
+
+The reason this clicker is on a phone is because we use your phone's mic to listen to what you say. We use a transcription of your speech to generate queries to Wolfram and Bing to generate elements for your slide.
+
+You may notice that there isn't a back button on this app. This is because you're winging this presentation and we'd like for you to stay dynamic :)/
 
 ##Web App
 Our web app integrates several libraries in order to create a slide interface that includes a macro view of your presentation, different presentation layouts and settings, and options for dynamic features.
@@ -32,6 +36,8 @@ Due to the number of requests, we used a local shim script as an in-between laye
 
 Git Repo: https://github.com/MAKE-UIUC/BHChi15
 Devpost: http://devpost.com/software/streampoint
+
+Deploying: This isn't in an easily deployable state as yet. Contact us and we'd be happy to help you with this :)
 
 We hope our app can be applied to make your world a flashier place!
 
