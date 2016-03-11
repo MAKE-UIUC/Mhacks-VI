@@ -18,6 +18,7 @@
 @property (strong, nonatomic) SKRecognizer* voiceSearch;
 @property (strong, nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) IBOutlet UIButton *RecordButton;
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data;
 - (IBAction)NextSlide:(id)sender;
 - (IBAction)Record_Down:(id)sender;
@@ -28,6 +29,8 @@
 - (IBAction)ChangeSlide:(id)sender;
 - (IBAction)SendWolfram:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *SendQuote;
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (IBAction)QuoteMe:(id)sender;
+- (IBAction)imgScroll:(id)sender;
 @end
 

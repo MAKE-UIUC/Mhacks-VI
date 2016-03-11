@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,68 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-4r-mlk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.81796480429292928" green="0.81796480429292928" blue="0.81796480429292928" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="RaA-WV-LB3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="32"/>
-                                <state key="normal" title="Send Slide">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="RaA-WV-LB3"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="200" height="170"/>
-                                    <mask key="constraints">
-                                        <include reference="RaA-WV-LB3"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="NextSlide:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DaX-Xf-EoV"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-4P-Ngl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="nBN-FC-WiW"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="nBN-FC-WiW"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="nBN-FC-WiW"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="354" width="320" height="214"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Uxc-TJ-eXZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="P3i-Z1-rhk"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.0" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
                                 <state key="normal" title="Record">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="P3i-Z1-rhk"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="P3i-Z1-rhk"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="141" width="320" height="144"/>
                                 </variation>
                                 <connections>
                                     <action selector="Record_Down:" destination="vXZ-lx-hvc" eventType="touchDown" id="DWh-b8-eWY"/>
@@ -89,36 +41,29 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7g-pu-ryY">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="k7g-pu-ryY" secondAttribute="height" multiplier="5:3" id="WFh-J6-y2A"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.10196078431372549" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
                                 <state key="normal" title="Quote Me">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="WFh-J6-y2A"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="210" y="20" width="110" height="118"/>
                                 </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="WFh-J6-y2A"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <action selector="QuoteMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gsx-61-snG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-av-d0v">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.29019607843137257" green="0.61960784313725492" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
                                 <state key="normal" title="&gt;&gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="200" y="20" width="200" height="170"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="288" width="320" height="63"/>
                                 </variation>
                                 <connections>
                                     <action selector="ChangeSlide:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2qe-3G-Kuk"/>
@@ -126,121 +71,59 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-Uv-qDk">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="UJa-rh-s21"/>
-                                    <constraint firstAttribute="width" secondItem="WsG-Uv-qDk" secondAttribute="height" multiplier="5:3" id="jst-Kj-8I5"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.10196078431372549" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
                                 <state key="normal" title="Ask Wolfram">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UJa-rh-s21"/>
-                                        <exclude reference="jst-Kj-8I5"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="UJa-rh-s21"/>
-                                        <include reference="jst-Kj-8I5"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="207" height="118"/>
                                 </variation>
                                 <connections>
                                     <action selector="SendWolfram:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iD6-db-qWj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-4r-mlk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.81796480429292928" green="0.81796480429292928" blue="0.81796480429292928" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="32"/>
+                                <state key="normal" title="Send Slide">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="354" width="320" height="214"/>
+                                </variation>
+                                <connections>
+                                    <action selector="NextSlide:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DaX-Xf-EoV"/>
+                                    <action selector="imgScroll:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="o1w-aO-RXP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gtT-4P-Ngl" secondAttribute="trailing" constant="-16" id="0AT-Yc-9kI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ujl-av-d0v" secondAttribute="trailing" constant="-16" id="19b-Yt-iLa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="k7g-pu-ryY" secondAttribute="trailing" constant="-16" id="3bQ-Pk-nvI"/>
-                            <constraint firstItem="k7g-pu-ryY" firstAttribute="top" secondItem="BZs-4r-mlk" secondAttribute="bottom" constant="8" id="3kG-wh-cVB"/>
-                            <constraint firstItem="gtT-4P-Ngl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5CU-OY-dD3"/>
-                            <constraint firstItem="k7g-pu-ryY" firstAttribute="top" secondItem="ujl-av-d0v" secondAttribute="bottom" constant="8" id="69F-en-VGG"/>
-                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="top" secondItem="k7g-pu-ryY" secondAttribute="bottom" constant="8" id="DXL-SK-yZa"/>
-                            <constraint firstItem="ujl-av-d0v" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="JAT-E2-EnE"/>
-                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="JY8-eL-PCQ"/>
-                            <constraint firstItem="BZs-4r-mlk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="MEp-Qo-84q"/>
-                            <constraint firstItem="k7g-pu-ryY" firstAttribute="leading" secondItem="WsG-Uv-qDk" secondAttribute="trailing" id="VgG-Lf-fkV"/>
-                            <constraint firstItem="Uxc-TJ-eXZ" firstAttribute="top" secondItem="WsG-Uv-qDk" secondAttribute="bottom" constant="8" id="c1j-TO-x2P"/>
-                            <constraint firstItem="WsG-Uv-qDk" firstAttribute="top" secondItem="BZs-4r-mlk" secondAttribute="bottom" constant="8" id="ots-5Q-Ugy"/>
-                            <constraint firstItem="ujl-av-d0v" firstAttribute="leading" secondItem="BZs-4r-mlk" secondAttribute="trailing" id="q1X-gf-Eh8"/>
-                            <constraint firstItem="gtT-4P-Ngl" firstAttribute="top" secondItem="Uxc-TJ-eXZ" secondAttribute="bottom" id="rzw-Fg-P7h"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uxc-TJ-eXZ" secondAttribute="trailing" constant="-16" id="s2N-5D-yex"/>
-                            <constraint firstItem="WsG-Uv-qDk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="sIE-Z0-OdM"/>
-                            <constraint firstItem="BZs-4r-mlk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="tXd-PR-g9L"/>
-                            <constraint firstItem="k7g-pu-ryY" firstAttribute="leading" secondItem="WsG-Uv-qDk" secondAttribute="trailing" id="wP2-f1-BbP"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gtT-4P-Ngl" secondAttribute="bottom" id="yfO-sQ-KBk"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="BZs-4r-mlk"/>
                                 <exclude reference="gtT-4P-Ngl"/>
                                 <exclude reference="Uxc-TJ-eXZ"/>
                                 <exclude reference="k7g-pu-ryY"/>
                                 <exclude reference="ujl-av-d0v"/>
                                 <exclude reference="WsG-Uv-qDk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="yfO-sQ-KBk"/>
-                                <exclude reference="MEp-Qo-84q"/>
-                                <exclude reference="tXd-PR-g9L"/>
-                                <exclude reference="DXL-SK-yZa"/>
-                                <exclude reference="JY8-eL-PCQ"/>
-                                <exclude reference="c1j-TO-x2P"/>
-                                <exclude reference="s2N-5D-yex"/>
-                                <exclude reference="ots-5Q-Ugy"/>
-                                <exclude reference="sIE-Z0-OdM"/>
-                                <exclude reference="3bQ-Pk-nvI"/>
-                                <exclude reference="3kG-wh-cVB"/>
-                                <exclude reference="69F-en-VGG"/>
-                                <exclude reference="VgG-Lf-fkV"/>
-                                <exclude reference="wP2-f1-BbP"/>
-                                <exclude reference="19b-Yt-iLa"/>
-                                <exclude reference="JAT-E2-EnE"/>
-                                <exclude reference="q1X-gf-Eh8"/>
-                                <exclude reference="0AT-Yc-9kI"/>
-                                <exclude reference="5CU-OY-dD3"/>
-                                <exclude reference="rzw-Fg-P7h"/>
+                                <exclude reference="BZs-4r-mlk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="BZs-4r-mlk"/>
                                 <include reference="gtT-4P-Ngl"/>
                                 <include reference="Uxc-TJ-eXZ"/>
                                 <include reference="k7g-pu-ryY"/>
                                 <include reference="ujl-av-d0v"/>
                                 <include reference="WsG-Uv-qDk"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="yfO-sQ-KBk"/>
-                                <include reference="MEp-Qo-84q"/>
-                                <include reference="tXd-PR-g9L"/>
-                                <include reference="DXL-SK-yZa"/>
-                                <include reference="JY8-eL-PCQ"/>
-                                <include reference="c1j-TO-x2P"/>
-                                <include reference="s2N-5D-yex"/>
-                                <include reference="ots-5Q-Ugy"/>
-                                <include reference="sIE-Z0-OdM"/>
-                                <include reference="3bQ-Pk-nvI"/>
-                                <include reference="3kG-wh-cVB"/>
-                                <include reference="69F-en-VGG"/>
-                                <exclude reference="VgG-Lf-fkV"/>
-                                <include reference="wP2-f1-BbP"/>
-                                <include reference="19b-Yt-iLa"/>
-                                <include reference="JAT-E2-EnE"/>
-                                <include reference="q1X-gf-Eh8"/>
-                                <include reference="0AT-Yc-9kI"/>
-                                <include reference="5CU-OY-dD3"/>
-                                <include reference="rzw-Fg-P7h"/>
+                                <include reference="BZs-4r-mlk"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="AskWolfram" destination="WsG-Uv-qDk" id="B6f-mo-mDO"/>
                         <outlet property="ImageDisp" destination="gtT-4P-Ngl" id="Raw-J3-SeE"/>

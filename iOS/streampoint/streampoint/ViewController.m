@@ -16,7 +16,14 @@
 const unsigned char SpeechKitApplicationKey[] = {0xd0, 0x2d, 0xc7, 0xf6, 0x45, 0x58, 0x06, 0xde, 0x2d, 0xf9, 0x76, 0x3f, 0x31, 0xc0, 0xaa, 0x5d, 0xf2, 0x1e, 0xe5, 0x77, 0x3c, 0x9f, 0x57, 0xbf, 0xc0, 0x14, 0xa4, 0xae, 0x5a, 0xe8, 0x80, 0x2b, 0x15, 0x47, 0x21, 0x5b, 0x9f, 0x27, 0x39, 0xcc, 0x20, 0xaf, 0x0c, 0x51, 0x6f, 0xb6, 0xae, 0x62, 0xd4, 0x93, 0xd9, 0x11, 0x32, 0x30, 0xd0, 0xf3, 0x44, 0x74, 0xa1, 0x9e, 0x5c, 0x21, 0xc9, 0x72};
 
 NSString* imagePath = @"";
+NSMutableArray* images;
 UIImage *defInput;
+NSString* buffer = @"";
+NSInteger imgAt = 1;
+CGPoint finger;
+NSInteger scroly = 0;
+NSInteger dtap = 0;
+
 
 SocketSend *comms;
 
@@ -31,13 +38,33 @@ BOOL recordState = FALSE;
     comms = [[SocketSend alloc] init];
     defInput = [self.ImageDisp image];
 
-    comms->host = @"35.3.110.65";
+    comms->host = @"172.17.162.128";
     comms->port = 4252;
+    images = [[NSMutableArray alloc] initWithCapacity:3];
+
+//    UISwipeGestureRecognizer* nextImg = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(imgScrollRight:)];
+    
 
     [comms setup];
 //    [comms open];
 
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)imgScrollRight:(UISwipeGestureRecognizer*) sender{
+    imgAt += 1;
+    NSLog(@"RIGHT SWIPE DETECTED");
+    if (imgAt == 3){
+        imgAt = 0;
+    }
+
+    NSURL *url = [NSURL URLWithString:images[imgAt]];
+    NSData *imgdata = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:imgdata];
+    CGSize size = img.size;
+    [self.ImageDisp setImage:img];
+
+
 }
 
 - (void)recognizerDidBeginRecording:(SKRecognizer *)recognizer {
@@ -49,6 +76,30 @@ BOOL recordState = FALSE;
 
     return;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    finger = [[[touches allObjects] objectAtIndex:0] locationInView:self];
+    NSLog(@"FINGER AT POSITION");
+}
+
+- (IBAction)QuoteMe:(id)sender {
+    NSString* wolfq = [[@"t " stringByAppendingString:self.RecordButton.currentTitle] stringByAppendingString:@"\r\n"];
+    [comms writeOut:wolfq];
+    return;
+
+}
+
+- (IBAction)imgScroll:(id)sender {
+    dtap = 0;
+    scroly += 1;
+    NSLog(@"Scroly = %d", scroly);
+    if (scroly == 3){
+        scroly = 0;
+        [self imgScrollRight:NULL];
+    }
+}
+
+
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results {
     long numOfResults = [results.results count];
@@ -84,17 +135,24 @@ BOOL recordState = FALSE;
 }
 
 - (IBAction)NextSlide:(id)sender {
-    //reset to red
-    self.RecordButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f
-                                                        green:0.0f/255.0f
-                                                         blue:0.0f/255.0f
-                                                        alpha:1.0f];
-    imagePath = [@"i " stringByAppendingString:imagePath];
-    imagePath = [imagePath stringByAppendingString:@"\r\n"];
-    [comms writeOut:imagePath];
-    [self.RecordButton setTitle: @"Record" forState:(UIControlStateNormal)];
-    [self.ImageDisp setImage:defInput];
-    [self.AskWolfram setTitle:@"AskWolfram" forState:UIControlStateNormal];
+    dtap += 1;
+    scroly = 0;
+    if (dtap == 2){
+        dtap = 0;
+        //reset to red
+        //self.RecordButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f
+          //                                              green:0.0f/255.0f
+            //                                             blue:0.0f/255.0f
+              //                                          alpha:1.0f];
+
+        imagePath = [@"i " stringByAppendingString:images[imgAt]];
+        imagePath = [imagePath stringByAppendingString:@"\r\n"];
+        [comms writeOut:imagePath];
+
+        //[self.RecordButton setTitle: @"Record" forState:(UIControlStateNormal)];
+        //[self.ImageDisp setImage:defInput];
+        //[self.AskWolfram setTitle:@"AskWolfram" forState:UIControlStateNormal];
+    }
 }
 
 
@@ -147,12 +205,24 @@ BOOL recordState = FALSE;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data{
-    NSLog(@"\n\nDID RECIEVE DATA\n\n");
+    NSLog(@"\n\n ------ DID RECIEVE DATA ------ \n\n");
     NSError *error = nil;
+    NSMutableString *DataString = [[NSMutableString alloc] initWithData:data encoding:nil];
+    NSLog(@"%@", DataString);
+        NSLog(@"\n\n ------ PRINTING NICE JSON ------ \n\n");
     NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     NSLog(@"%@", jsonArray);
+    if (error){
+        [self.RecordButton setTitle: @"KUUUZZZ.. waiy u do dis" forState:(UIControlStateNormal)];
+        return;
+
+    }
     NSLog(@"TRYING SOME NONSENSE \n\n");
-    imagePath = [[[jsonArray valueForKey:@"results"] valueForKey:@"img"] objectAtIndex:0];
+    images[0] = [[[jsonArray valueForKey:@"results"] valueForKey:@"img"] objectAtIndex:0];
+    images[1] = [[[jsonArray valueForKey:@"results"] valueForKey:@"img"] objectAtIndex:1];
+    images[2] = [[[jsonArray valueForKey:@"results"] valueForKey:@"img"] objectAtIndex:2];
+
+    imagePath = images[0];
     [self.AskWolfram setTitle:[[[jsonArray valueForKey:@"results"] valueForKey:@"wolfram"] objectAtIndex:0] forState:(UIControlStateNormal)];
     NSLog(@"%@", imagePath);
 
